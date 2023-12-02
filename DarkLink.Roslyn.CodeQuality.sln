@@ -13,6 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkLink.Roslyn.CodeQuality
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkLink.Roslyn.CodeQuality.Vsix", "DarkLink.Roslyn.CodeQuality\DarkLink.Roslyn.CodeQuality.Vsix\DarkLink.Roslyn.CodeQuality.Vsix.csproj", "{E7F7065C-3BF5-4CAC-8DDB-BEEF295356F4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{41D421C9-F1DD-4282-AD36-E31AD9DE91F9}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
