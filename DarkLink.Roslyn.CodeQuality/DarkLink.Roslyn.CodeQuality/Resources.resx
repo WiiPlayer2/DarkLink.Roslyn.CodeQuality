@@ -118,33 +118,30 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CQ0001_Description" xml:space="preserve">
-    <value>Type names should be all uppercase.</value>
-    <comment>An optional longer localizable description of the diagnostic.</comment>
+    <value>Methods should not mix composition and logic.</value>
   </data>
   <data name="CQ0001_MessageFormat" xml:space="preserve">
-    <value>Type name '{0}' contains lowercase letters</value>
-    <comment>The format-able message the diagnostic displays.</comment>
+    <value>Method '{0}' contains composition and logic</value>
   </data>
   <data name="CQ0001_Title" xml:space="preserve">
-    <value>Type name contains lowercase letters</value>
-    <comment>The title of the diagnostic.</comment>
+    <value>Method contains composition and logic</value>
   </data>
   <data name="CQ0002_Description" xml:space="preserve">
-    <value />
+    <value>Logic should not be used in composited method.</value>
   </data>
   <data name="CQ0002_MessageFormat" xml:space="preserve">
-    <value />
+    <value>Logic ({0}) is used inside primarily composited method</value>
   </data>
   <data name="CQ0002_Title" xml:space="preserve">
-    <value />
+    <value>Logic is used inside primarily composited method</value>
   </data>
   <data name="CQ0003_Description" xml:space="preserve">
-    <value />
+    <value>Composition should not be used in logical method.</value>
   </data>
   <data name="CQ0003_MessageFormat" xml:space="preserve">
-    <value />
+    <value>Composition ({0}) is used inside primarily logical method</value>
   </data>
   <data name="CQ0003_Title" xml:space="preserve">
-    <value />
+    <value>Composition is used inside primarily logical method</value>
   </data>
 </root>

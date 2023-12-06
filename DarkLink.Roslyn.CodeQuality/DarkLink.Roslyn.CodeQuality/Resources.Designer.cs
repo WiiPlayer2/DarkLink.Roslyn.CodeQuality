@@ -61,7 +61,7 @@ namespace DarkLink.Roslyn.CodeQuality {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Type names should be all uppercase..
+        ///   Looks up a localized string similar to Methods should not mix composition and logic..
         /// </summary>
         internal static string CQ0001_Description {
             get {
@@ -70,7 +70,7 @@ namespace DarkLink.Roslyn.CodeQuality {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Type name &apos;{0}&apos; contains lowercase letters.
+        ///   Looks up a localized string similar to Method &apos;{0}&apos; contains composition and logic.
         /// </summary>
         internal static string CQ0001_MessageFormat {
             get {
@@ -79,7 +79,7 @@ namespace DarkLink.Roslyn.CodeQuality {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Type name contains lowercase letters.
+        ///   Looks up a localized string similar to Method contains composition and logic.
         /// </summary>
         internal static string CQ0001_Title {
             get {
@@ -88,7 +88,7 @@ namespace DarkLink.Roslyn.CodeQuality {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Logic should not be used in composited method..
         /// </summary>
         internal static string CQ0002_Description {
             get {
@@ -97,7 +97,7 @@ namespace DarkLink.Roslyn.CodeQuality {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Logic ({0}) is used inside primarily composited method.
         /// </summary>
         internal static string CQ0002_MessageFormat {
             get {
@@ -106,7 +106,7 @@ namespace DarkLink.Roslyn.CodeQuality {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Logic is used inside primarily composited method.
         /// </summary>
         internal static string CQ0002_Title {
             get {
@@ -115,7 +115,7 @@ namespace DarkLink.Roslyn.CodeQuality {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Composition should not be used in logical method..
         /// </summary>
         internal static string CQ0003_Description {
             get {
@@ -124,7 +124,7 @@ namespace DarkLink.Roslyn.CodeQuality {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Composition ({0}) is used inside primarily logical method.
         /// </summary>
         internal static string CQ0003_MessageFormat {
             get {
@@ -133,7 +133,7 @@ namespace DarkLink.Roslyn.CodeQuality {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Composition is used inside primarily logical method.
         /// </summary>
         internal static string CQ0003_Title {
             get {

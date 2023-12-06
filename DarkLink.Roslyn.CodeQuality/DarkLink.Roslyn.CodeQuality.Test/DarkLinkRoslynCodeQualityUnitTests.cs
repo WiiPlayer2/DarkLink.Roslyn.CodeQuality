@@ -22,14 +22,14 @@ class P
         return C();
     }
 
-    public static int C() => 0
+    public static int C() => 0;
 }
 ";
 
         await VerifyCS.VerifyAnalyzerAsync(
             test,
-            DiagnosticResult.CompilerWarning(Diagnostics.CQ0001_MethodMixed.Id),
-            DiagnosticResult.CompilerWarning(Diagnostics.CQ0003_CompositionInLogic.Id));
+            DiagnosticResult.CompilerWarning(Diagnostics.CQ0001_MethodMixed.Id).WithLocation(4, 24),
+            DiagnosticResult.CompilerWarning(Diagnostics.CQ0003_CompositionInLogic.Id).WithLocation(7, 16));
     }
 
     [TestMethod]
@@ -59,7 +59,7 @@ class P
 
         await VerifyCS.VerifyAnalyzerAsync(
             test,
-            DiagnosticResult.CompilerWarning(Diagnostics.CQ0001_MethodMixed.Id),
-            DiagnosticResult.CompilerWarning(Diagnostics.CQ0002_LogicInComposition.Id));
+            DiagnosticResult.CompilerWarning(Diagnostics.CQ0001_MethodMixed.Id).WithLocation(6, 23),
+            DiagnosticResult.CompilerWarning(Diagnostics.CQ0002_LogicInComposition.Id).WithLocation(10, 16));
     }
 }
