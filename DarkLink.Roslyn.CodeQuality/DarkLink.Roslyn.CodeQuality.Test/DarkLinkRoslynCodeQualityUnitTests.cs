@@ -41,6 +41,60 @@ class P
     }
 
     [TestMethod]
+    public async Task WithForeachLoopInComposition_RaisesWarnings()
+    {
+        var test = @"
+class P
+{
+    private static int L(bool s) => s ? 0 : 1; 
+
+    public static void C()
+    {
+        var v1 = L(true);
+        var v2 = L(false);
+        
+        foreach(var i in new[]{1, 2, 3})
+        {
+            L(false);
+        }
+    }
+}
+";
+
+        await VerifyCS.VerifyAnalyzerAsync(
+            test,
+            DiagnosticResult.CompilerWarning(Diagnostics.CQ0001_MethodMixed.Id).WithLocation(6, 24),
+            DiagnosticResult.CompilerWarning(Diagnostics.CQ0002_LogicInComposition.Id).WithLocation(11, 9));
+    }
+
+    [TestMethod]
+    public async Task WithForLoopInComposition_RaisesWarnings()
+    {
+        var test = @"
+class P
+{
+    private static int L(bool s) => s ? 0 : 1; 
+
+    public static void C()
+    {
+        var v1 = L(true);
+        var v2 = L(false);
+        
+        for(var i = 0; i < 10; i++)
+        {
+            L(false);
+        }
+    }
+}
+";
+
+        await VerifyCS.VerifyAnalyzerAsync(
+            test,
+            DiagnosticResult.CompilerWarning(Diagnostics.CQ0001_MethodMixed.Id).WithLocation(6, 24),
+            DiagnosticResult.CompilerWarning(Diagnostics.CQ0002_LogicInComposition.Id).WithLocation(11, 9));
+    }
+
+    [TestMethod]
     public async Task WithLogicInComposition_RaisesWarnings()
     {
         var test = @"
