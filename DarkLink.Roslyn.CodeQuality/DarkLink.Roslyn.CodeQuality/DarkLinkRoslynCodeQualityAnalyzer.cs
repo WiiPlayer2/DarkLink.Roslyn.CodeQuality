@@ -28,9 +28,7 @@ public class DarkLinkRoslynCodeQualityAnalyzer : DiagnosticAnalyzer
 
             analysisContext.RegisterOperationAction(operationAnalysisContext => { logicNodes.Add(operationAnalysisContext.Operation); },
                 OperationKind.Branch,
-                OperationKind.Conditional,
-                OperationKind.ConditionalAccess,
-                OperationKind.ConditionalAccessInstance);
+                OperationKind.Conditional);
 
             analysisContext.RegisterOperationAction(operationAnalysisContext => { compositionNodes.Add((IInvocationOperation) operationAnalysisContext.Operation); },
                 OperationKind.Invocation);
