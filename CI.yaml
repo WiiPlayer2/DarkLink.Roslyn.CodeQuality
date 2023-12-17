@@ -1,0 +1,5 @@
+- Nuget:
+    SourceCredentials: private-nuget-repo
+    Project: ./DarkLink.Roslyn.CodeQuality/DarkLink.Roslyn.CodeQuality.Package/DarkLink.Roslyn.CodeQuality.Package.csproj
+    VersionSuffix: pre$TIMESTAMP
+    PackageOutput: ./packages
